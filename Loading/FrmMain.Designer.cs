@@ -28,12 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.BtnLoading = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // BtnLoading
+            // 
+            this.BtnLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnLoading.Location = new System.Drawing.Point(135, 100);
+            this.BtnLoading.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnLoading.Name = "BtnLoading";
+            this.BtnLoading.Size = new System.Drawing.Size(120, 40);
+            this.BtnLoading.TabIndex = 0;
+            this.BtnLoading.Text = "Show";
+            this.BtnLoading.UseVisualStyleBackColor = true;
+            this.BtnLoading.Click += new System.EventHandler(this.BtnLoading_Click);
+            // 
+            // FrmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(382, 253);
+            this.Controls.Add(this.BtnLoading);
+            this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(400, 300);
+            this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Loading Demo";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BtnLoading;
     }
 }
 

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using System.Windows.Forms;
 
 namespace Loading
@@ -15,6 +8,15 @@ namespace Loading
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        private void BtnLoading_Click(object sender, System.EventArgs e)
+        {
+            LoadingHelper.ShowLoading("有朋自远方来，不亦乐乎。", this, (obj) =>
+            {
+                //这里写处理耗时的代码，代码处理完成则自动关闭该窗口
+                Thread.Sleep(10000);
+            });
         }
     }
 }
